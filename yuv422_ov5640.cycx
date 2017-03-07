@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ASCII"?>
+<cx3configurationmodel:CX3Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:cx3configurationmodel="http://cx3configurationmodel/1.0" useSensorConfiguration="true" isPredefinedConfiguration="true">
+  <sensorConfiguration thsPrepare="90.0" thsZero="70.0" sensor="OV5640">
+    <videoFormatConfigurations videoFormat="YUY2" optimumVideoFrameResolution="1" outputDataFormat="YUY2" pixelPacking="16-Bit">
+      <frameResolutionConfigurations frameResolutionName="5M" noOfDataLanes="2" csiFrequency="315.0" hActive="2592" hBlanking="50" vActive="1944" vBlanking="5" frameRate="15.0" stillImageSupport="true" videoStreamingSupport="true" mipiReceiverConfiguration="//@mipiReceiverConfigurations.0"/>
+      <frameResolutionConfigurations frameResolutionName="1080p" noOfDataLanes="2" csiFrequency="315.0" hActive="1920" hBlanking="50" vActive="1080" vBlanking="5" frameRate="30.0" stillImageSupport="true" videoStreamingSupport="true" mipiReceiverConfiguration="//@mipiReceiverConfigurations.1"/>
+      <frameResolutionConfigurations frameResolutionName="720p" noOfDataLanes="2" csiFrequency="315.0" hActive="1280" hBlanking="50" vActive="720" vBlanking="5" frameRate="30.0" stillImageSupport="true" videoStreamingSupport="true" mipiReceiverConfiguration="//@mipiReceiverConfigurations.2"/>
+      <frameResolutionConfigurations frameResolutionName="Vga" noOfDataLanes="1" csiFrequency="315.0" hActive="640" hBlanking="50" vActive="480" vBlanking="5" frameRate="30.0" stillImageSupport="true" videoStreamingSupport="true" mipiReceiverConfiguration="//@mipiReceiverConfigurations.3"/>
+    </videoFormatConfigurations>
+  </sensorConfiguration>
+  <mipiReceiverConfigurations name="OV5640_YUY2_5M" mipiStructure="CY_U3P_CSI_DF_YUV422_8_2">
+    <mipiCsi2Input csiClock="315" dataLane="2" thsPrepare="90.0" thsZero="70" hActive="2592" hBlanking="50" vActive="1944" vBlanking="5" dataFormat="YUY2" frameRate="15.0"/>
+    <mipiInterfaceConfiguration refClk="19.2" preDividerValue="2" pllOutClockRange="500M-1G" multipleValueOfUnitClock="65" pixelClockDivider="8" piiClockDivider="8" mClkDiv="2" fifoDelay="1" mClkLow="2" mClkHigh="2" dataFormat="YUY2"/>
+  </mipiReceiverConfigurations>
+  <mipiReceiverConfigurations name="OV5640_YUY2_1080p" mipiStructure="CY_U3P_CSI_DF_YUV422_8_2">
+    <mipiCsi2Input csiClock="315" dataLane="2" thsPrepare="90.0" thsZero="70" hActive="1920" hBlanking="50" vActive="1080" vBlanking="5" dataFormat="YUY2" frameRate="30.0"/>
+    <mipiInterfaceConfiguration refClk="19.2" preDividerValue="2" pllOutClockRange="500M-1G" multipleValueOfUnitClock="63" pixelClockDivider="8" piiClockDivider="8" mClkDiv="2" fifoDelay="50" mClkLow="2" mClkHigh="2" dataFormat="YUY2"/>
+  </mipiReceiverConfigurations>
+  <mipiReceiverConfigurations name="OV5640_YUY2_720p" mipiStructure="CY_U3P_CSI_DF_YUV422_8_2">
+    <mipiCsi2Input csiClock="315" dataLane="2" thsPrepare="90.0" thsZero="70" hActive="1280" hBlanking="50" vActive="720" vBlanking="5" dataFormat="YUY2" frameRate="30.0"/>
+    <mipiInterfaceConfiguration refClk="19.2" preDividerValue="2" pllOutClockRange="500M-1G" multipleValueOfUnitClock="63" pixelClockDivider="8" piiClockDivider="8" mClkDiv="2" fifoDelay="50" mClkLow="2" mClkHigh="2" dataFormat="YUY2"/>
+  </mipiReceiverConfigurations>
+  <mipiReceiverConfigurations name="OV5640_YUY2_Vga" mipiStructure="CY_U3P_CSI_DF_YUV422_8_2">
+    <mipiCsi2Input csiClock="315" dataLane="1" thsPrepare="90.0" thsZero="70" hActive="640" hBlanking="50" vActive="480" vBlanking="5" dataFormat="YUY2" frameRate="30.0"/>
+    <mipiInterfaceConfiguration refClk="19.2" preDividerValue="2" pllOutClockRange="125M-250M" multipleValueOfUnitClock="91" pixelClockDivider="8" piiClockDivider="2" mClkDiv="2" fifoDelay="1" mClkLow="2" mClkHigh="2" dataFormat="YUY2"/>
+  </mipiReceiverConfigurations>
+  <videoStreamInputDescriptor totalSize="161">
+    <uvcformatdescriptors vsDescriptorLength="27" formatDescriptorIndex="1" guid="0X59,0X55,0X59,0X32,&#xA;0X00,0X00,0X10,0X00,&#xA;0X80,0X00,0X00,0XAA,&#xA;0X00,0X38,0X9B,0X71,&#xA;" subType="4" videoFormat="YUY2" optimumVideoFrameResolution="1" noOfBitsPerPixel="16">
+      <uvcframeresolutiondescriptor subtype="5" frameIndex="1" width="2592" height="1944" minBitRate="1209323520" maxBitRate="1209323520" maxVideoFrameSize="10077696" defaultFrameInterval="666666" frameInterval="666666" frameResolutionName="5M"/>
+      <uvcframeresolutiondescriptor subtype="5" frameIndex="2" width="1920" height="1080" minBitRate="995328000" maxBitRate="995328000" maxVideoFrameSize="4147200" defaultFrameInterval="333333" frameInterval="333333" frameResolutionName="1080p"/>
+      <uvcframeresolutiondescriptor subtype="5" frameIndex="3" width="1280" height="720" minBitRate="442368000" maxBitRate="442368000" maxVideoFrameSize="1843200" defaultFrameInterval="333333" frameInterval="333333" frameResolutionName="720p"/>
+      <uvcframeresolutiondescriptor subtype="5" frameIndex="4" width="640" height="480" minBitRate="147456000" maxBitRate="147456000" maxVideoFrameSize="614400" defaultFrameInterval="333333" frameInterval="333333" frameResolutionName="Vga"/>
+    </uvcformatdescriptors>
+  </videoStreamInputDescriptor>
+</cx3configurationmodel:CX3Configuration>
